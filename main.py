@@ -30,6 +30,7 @@ if uploaded_file is not None:
     for column in df.columns:
         if st.sidebar.checkbox(column):
             features.append(column)
+            
     target = st.sidebar.selectbox("Select Target", set(df.columns) - set(features))
 
 
